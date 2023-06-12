@@ -71,6 +71,9 @@ svg {
   display: block;
   max-width: 100%;
 }
+img{
+    display: inline;
+}
 /*
     7. Remove built-in form typography styles
   */
@@ -282,6 +285,7 @@ h6,
 .h6 {
   margin: 0 0 2rem;
   text-transform: capitalize;
+  font-weight: 700;
 }
 
 h1,
@@ -289,6 +293,7 @@ h1,
   font-size: 7rem;
   line-height: 8rem;
   margin-bottom: 3rem;
+  letter-spacing: -0.02em;
 }
 
 h2,
@@ -406,3 +411,30 @@ a {
 }
 
 /* containers */
+
+/* main/sections */
+.section-hero {
+  text-align: center;
+}
+.section-hero__wrapper {
+}
+.section-hero__textbox {
+  width: 100%;
+  max-width: 81.4rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.section-hero__title {
+  margin-bottom: 3rem;
+}
+.section-hero__desc {
+  width: 100%;
+  max-width: 50.2rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.section-hero__cta {
+}
+.section-hero__img {
+}
+/* main/sections */
