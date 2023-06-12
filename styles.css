@@ -1,11 +1,22 @@
 /* variables */
 :root {
+  /* colors */
   --color-base: #02073e;
   --color-black: black;
   --color-white: white;
   --color-primary: #ea3a60;
 
+  /* containers */
+  --container-default: 111rem;
+  --container-small: 100rem;
+  --container-medium: 130rem;
+  --container-large: 144rem;
+  --container-gutter: 2.4rem;
+
+  /* fonts */
   --primary-font: "DM Sans", sans-serif;
+
+  /* transitions */
   --transition1: all 0.3s ease-in-out;
   --transition2: all 0.5s ease-in-out;
 }
@@ -71,8 +82,8 @@ svg {
   display: block;
   max-width: 100%;
 }
-img{
-    display: inline;
+img {
+  display: inline;
 }
 /*
     7. Remove built-in form typography styles
@@ -403,18 +414,72 @@ a {
 /* containers */
 .container {
   width: 100%;
-  max-width: 144rem;
+  max-width: var(--container-default);
   margin-right: auto;
   margin-left: auto;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+}
+.container--small {
+  max-width: var(--container-small);
+}
+.container--medium {
+  max-width: var(--container-medium);
+}
+.container--large {
+  max-width: var(--container-large);
 }
 
 /* containers */
+/* section paddings */
 
+.section-container {
+  padding: 50px 0;
+}
+.section-container--xsmall {
+  padding: 30px 0;
+}
+.section-container--xsmall.section-container--padding-top {
+  padding: 30px 0 0;
+}
+.section-container--xsmall.section-container--padding-bottom {
+  padding: 0 0 30px;
+}
+.section-container--small {
+  padding: 100px 0;
+}
+.section-container--small.section-container--padding-top {
+  padding: 100px 0 0;
+}
+.section-container--small.section-container--padding-bottom {
+  padding: 0 0 100px;
+}
+.section-container--lopsided {
+  padding: 150px 0 120px;
+}
+.section-container--medium {
+  padding: 180px 0;
+}
+.section-container--medium.section-container--padding-top {
+  padding: 180px 0 0;
+}
+.section-container--medium.section-container--padding-bottom {
+  padding: 0 0 180px;
+}
+.section-container--large {
+  padding: 200px 0;
+}
+.section-container--large.section-container--padding-top {
+  padding: 200px 0 0;
+}
+.section-container--large.section-container--padding-bottom {
+  padding: 0 0 200px;
+}
+/* section paddings */
 /* main/sections */
 .section-hero {
   text-align: center;
+  border: 1px solid red;
 }
 .section-hero__wrapper {
 }
