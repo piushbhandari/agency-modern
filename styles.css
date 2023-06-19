@@ -968,6 +968,19 @@ a {
   margin-bottom: 3rem;
 }
 /* side by side  */
+
+/* etc */
+.quality-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9rem 2.5rem;
+}
+.quality-features__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+/* etc */
 /* main/sections */
 
 /* footer */
@@ -1044,6 +1057,10 @@ a {
   .team-listing__item {
     flex: 1 0 50%;
   }
+  .quality-features {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 @media all and (max-width: 600px) {
   .footer-links {
@@ -1054,6 +1071,12 @@ a {
 @media all and (max-width: 460px) {
   .feature-listing__item {
     width: 100%;
+  }
+  .quality-features__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
   }
 }
 /* media queries */
