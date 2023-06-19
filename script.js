@@ -25,6 +25,33 @@ const observer = new IntersectionObserver(
   }
 );
 
-cards.forEach((card) => {
-  observer.observe(card);
+// cards.forEach((card) => {
+//   observer.observe(card);
+// });
+
+// data expanders
+
+const dataExpanders = [...document.querySelectorAll("[data-toggle]")];
+
+dataExpanders.forEach((expander) => {
+  let expanderAttribute = expander.getAttribute("data-target");
+  let expanderTarget = document.querySelector(
+    `[data-target="${expanderAttribute}"]`
+  );
+
+  let htmlElement = document.querySelector("html");
+
+  expander.addEventListener("click", (e) => {
+    let currentBtnElement = e.currentTarget;
+
+    if (currentBtnElement.classList.contains("active")) {
+      currentBtnElement.classList.remove("active");
+      expanderTarget.classList.remove("active");
+      htmlElement.classList.add("js-data-toggled");
+    } else if (!currentBtnElement.classList.contains("active")) {
+      currentBtnElement.classList.add("active");
+      expanderTarget.classList.add("active");
+      htmlElement.classList.remove("js-data-toggled");
+    }
+  });
 });
