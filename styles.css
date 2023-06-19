@@ -6,6 +6,8 @@
   --color-black2: #0f2137;
   --color-white: white;
   --color-primary: #ea3a60;
+  --color-blue: #2563ff;
+  --color-orange: #ffa740;
 
   /* containers */
   --container-default: 115.8rem;
@@ -648,7 +650,7 @@ a {
 .nav-links__link:focus {
   text-decoration: underline;
 }
- 
+
 .hamburger-btn {
   display: none;
 }
@@ -1061,6 +1063,94 @@ a {
   margin: 0;
   color: var(--color-white);
 }
+/* steps */
+
+/* price table */
+.pricing-tables {
+  display: flex;
+  gap: 3.3rem;
+}
+.suggested-item {
+  position: absolute;
+  left: 40px;
+  top: -13px;
+  border-radius: 10px;
+  background: var(--color-orange);
+  padding: 1rem;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.14px;
+  font-weight: 700;
+}
+.pricing-tables__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  border: 1px solid #f3f4f5;
+  border-radius: 1rem;
+  padding: 4rem 4rem 8.8rem 4rem;
+  /* box-shadow: 0px 4px 10px rgba(39, 83, 123, 0.12); */
+}
+.pricing-tables__top {
+  margin-bottom: 4rem;
+}
+.pricing-tables__title {
+  margin-bottom: 0.65px;
+}
+.pricing-tables__sub {
+  margin: 0;
+}
+ul.pricing-tables__checklist {
+  margin-bottom: 5rem;
+}
+.pricing-tables__item2 {
+  font-size: 1.6rem;
+  line-height: 4.2rem;
+  font-weight: 500;
+  position: relative;
+  list-style-type: none;
+  padding-left: 3.4rem;
+}
+.pricing-tables__item2:before {
+  content: url("https://i.ibb.co/F4W8hfb/Combined-shape-16073.png");
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  left: 0;
+  margin: 0.5rem 0;
+}
+.pricing-tables__bottom {
+ 
+  margin-top: auto;
+}
+.pricing-tables__price {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+}
+.pricing-tables__price span {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+.pricing-tables__cta {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3.7rem;
+}
+.pricing-tables__etc {
+  margin: 0;
+  margin-top: 1.45rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-blue);
+}
+/* price table */
 /* etc */
 /* main/sections */
 
@@ -1138,10 +1228,26 @@ a {
     flex-direction: column;
   }
   .header__cta {
-  margin-top: 5rem;
+    margin-top: 5rem;
   }
   .hamburger-btn {
     display: flex;
+  }
+  .pricing-tables {
+    flex-direction: column;
+  }
+  .pricing-tables__checklist {
+    column-count: 2;
+  }
+  .pricing-tables__price {
+    text-align: left;
+  }
+  .pricing-tables__cta {
+    margin-left: initial;
+    margin-right: initial;
+  }
+  .pricing-tables__etc {
+    text-align: left;
   }
 }
 @media all and (max-width: 900px) {
@@ -1186,6 +1292,11 @@ a {
   .footer-links {
     flex-direction: column;
     gap: 1.5rem;
+  }
+}
+@media all and (max-width: 530px) {
+  .pricing-tables__checklist {
+    column-count: 1;
   }
 }
 @media all and (max-width: 460px) {
