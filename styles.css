@@ -403,11 +403,12 @@ a {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.6rem;
-  line-height: 3rem;
+  line-height: 2.4rem;
   letter-spacing: -0.16px;
   padding: 1.3rem 4.7rem;
   outline: 2px solid transparent;
   min-width: 15rem;
+  border-radius: 50px;
 }
 
 .button:hover,
@@ -419,9 +420,14 @@ a {
   background: transparent;
 }
 .button-red {
-  border-radius: 50px;
   background: var(--color-primary);
   color: var(--color-white);
+  outline: 2px solid var(--color-primary);
+}
+.hollow-red {
+  background: transparent;
+  color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
 }
 
 /* buttons */
@@ -587,6 +593,49 @@ a {
 
 /* animations animation-delay: 250ms; */
 
+/* header */
+.header {
+  padding-top: 3rem;
+  margin-bottom: 15rem;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo a {
+  display: block;
+}
+.header-nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 23rem;
+}
+.navbar {
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.nav-links__item {
+}
+.nav-links__link {
+  text-decoration: none;
+}
+
+.nav-links__link:hover,
+.nav-links__link:focus {
+  text-decoration: underline;
+}
+.header__cta {
+}
+.hamburger-btn {
+  display: none;
+}
+/* header */
 /* main/sections */
 /* hero */
 .section-hero {
@@ -958,6 +1007,14 @@ a {
 @media all and (max-width: 1170px) {
   .section-hero__shape {
     display: none;
+  }
+}
+@media all and (max-width: 1000px) {
+  .header-nav {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
   }
 }
 @media all and (max-width: 900px) {
