@@ -404,8 +404,7 @@ a {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 3rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  letter-spacing: -0.16px; 
   padding: 1.3rem 4.7rem;
   outline: 2px solid transparent;
   min-width: 15rem;
@@ -633,6 +632,67 @@ a {
 .feature-listing__text {
 }
 /* features */
+
+/* subscribe */
+
+.section-subscribe__container {
+  position: relative;
+  background: var(--color-primary);
+  padding: 6rem 3rem;
+  color: var(--color-white);
+  border-radius: 1rem;
+  text-align: center;
+}
+.section-subscribe__textbox {
+  margin-bottom: 6rem;
+}
+.section-subscribe__title {
+  color: var(--color-white);
+}
+.section-subscribe__text {
+  width: 100%;
+  max-width: 54.6rem;
+  margin: 0 auto;
+}
+
+.section-subscribe__text > * {
+  color: var(--color-white);
+}
+.section-subscribe__text p:last-child {
+  margin: 0;
+}
+.section-subscribe__form {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  position: relative;
+}
+.section-subscribe__input {
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 5rem;
+  padding: 1.8rem 17rem 1.8rem 3rem;
+  border: none;
+}
+.section-subscribe__input,
+.section-subscribe__input::placeholder {
+  font-size: 1.6rem;
+  letter-spacing: -0.16px;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+.section-subscribe__submit-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.section-subscribe__pattern {
+  display: none;
+}
+/* subscribe */
 /* main/sections */
 
 /* footer */
