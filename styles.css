@@ -8,10 +8,10 @@
   --color-primary: #ea3a60;
 
   /* containers */
-  --container-default: 111rem;
-  --container-small: 100rem;
-  --container-medium: 130rem;
-  --container-large: 144rem;
+  --container-default: 115.8rem;
+  --container-small: 107.2rem;
+  --container-medium: 134.8rem;
+  --container-large: 148.8rem;
   --container-gutter: 2.4rem;
 
   /* fonts */
@@ -444,6 +444,10 @@ a {
 .container--large {
   max-width: var(--container-large);
 }
+.container--full {
+  max-width: 100%;
+  padding: 0;
+}
 
 /* containers */
 /* section paddings */
@@ -553,6 +557,18 @@ a {
   }
 }
 
+@keyframes comeInQuick {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
 /* animations animation-delay: 250ms; */
 
 /* main/sections */
@@ -633,6 +649,80 @@ a {
 }
 /* features */
 
+/* team */
+.section-team .container {
+  border: 1px solid pink;
+}
+.team-listing {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team-listing__item {
+  border-radius: 10px;
+  padding: 3rem;
+  padding-right: 6rem;
+  position: relative;
+  flex: 1 0 33.333333%;
+}
+.team-listing__item:hover {
+  box-shadow: 0px 4px 10px rgba(39, 83, 123, 0.12);
+}
+.team-listing__container {
+  text-align: center;
+}
+.team-listing__prof {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.team-listing__prof img {
+  border-radius: 50%;
+}
+.team-listing__name {
+  margin-bottom: 1.5rem;
+}
+.team-listing__position {
+  margin: 0;
+}
+.team-listing__item:hover .team-listing__name,
+.team-listing__item:hover .team-listing__position {
+  color: var(--color-primary);
+}
+.social-medias {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.social-medias__item {
+  opacity: 0;
+  display: none;
+}
+.team-listing__item:hover .social-medias__item {
+  display: flex;
+  animation: comeInQuick 0.5s linear forwards;
+}
+
+.social-medias li:first-child {
+}
+.social-medias li:nth-child(2) {
+  animation-delay: 0.9s;
+}
+.social-medias li:last-child {
+  animation-delay: 2s;
+}
+.social-medias__item {
+}
+.social-medias__link:hover,
+.social-medias__link:hover:focus {
+  transform: scale(1.3) rotate(360deg);
+}
+/* team */
 /* subscribe */
 
 .section-subscribe__container {
