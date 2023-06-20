@@ -8,6 +8,7 @@
   --color-primary: #ea3a60;
   --color-blue: #2563ff;
   --color-orange: #ffa740;
+  --color-gray: #f7f8fb;
 
   /* containers */
   --container-default: 115.8rem;
@@ -59,6 +60,7 @@ html,
 body,
 #__next {
   height: 100%;
+  height: auto;
 }
 /* Set core root defaults */
 html:focus-within {
@@ -618,6 +620,15 @@ a {
   padding-top: 3rem;
   margin-bottom: 15rem;
 }
+.header.active-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--color-white);
+}
 .header__wrapper {
   display: flex;
   align-items: center;
@@ -1070,16 +1081,48 @@ a {
   display: flex;
   gap: 3.3rem;
 }
+
+.plan-btn-box {
+  background: var(--color-gray);
+  border-radius: 10px;
+  padding: 6px;
+  width: fit-content;
+  min-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.plan-btn-box__btn {
+  flex: 1;
+  border-radius: 10px;
+  padding: 1.3rem 2.1rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+.plan-btn-box__btn.active {
+  background: var(--color-white);
+  box-shadow: 0px 3px 3.8px rgba(38, 78, 118, 0.1);
+}
+.plan-btn-box__btn:hover,
+.plan-btn-box__btn:focus {
+  background: var(--color-white);
+  box-shadow: 0px 3px 3.8px rgba(38, 78, 118, 0.1);
+}
 .suggested-item {
   position: absolute;
   left: 40px;
   top: -13px;
   border-radius: 10px;
   background: var(--color-orange);
-  padding: 1rem;
+  padding: 3px 1rem;
+  min-height: 3rem;
+}
+.suggested-item span {
   color: var(--color-white);
   font-size: 1.4rem;
-  line-height: 2.8rem;
   letter-spacing: -0.14px;
   font-weight: 700;
 }
@@ -1090,8 +1133,10 @@ a {
   flex: 1;
   border: 1px solid #f3f4f5;
   border-radius: 1rem;
-  padding: 4rem 4rem 8.8rem 4rem;
-  /* box-shadow: 0px 4px 10px rgba(39, 83, 123, 0.12); */
+  padding: 5rem 4rem 8.8rem 4rem;
+}
+.pricing-tables__item--suggested {
+  box-shadow: 0px 4px 10px rgba(39, 83, 123, 0.12);
 }
 .pricing-tables__top {
   margin-bottom: 4rem;
@@ -1122,8 +1167,9 @@ ul.pricing-tables__checklist {
   margin: 0.5rem 0;
 }
 .pricing-tables__bottom {
- 
   margin-top: auto;
+  position: relative;
+  padding-bottom: 4rem;
 }
 .pricing-tables__price {
   text-align: center;
@@ -1144,11 +1190,19 @@ ul.pricing-tables__checklist {
   margin-top: 3.7rem;
 }
 .pricing-tables__etc {
-  margin: 0;
-  margin-top: 1.45rem;
+  width: 100%;
   text-align: center;
   font-weight: 700;
   color: var(--color-blue);
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pricing-tables__etc:hover,
+.pricing-tables__etc:focus {
+  text-decoration: underline;
 }
 /* price table */
 /* etc */

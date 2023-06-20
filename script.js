@@ -55,3 +55,31 @@ dataExpanders.forEach((expander) => {
     }
   });
 });
+
+// sticky header
+
+const header = document.querySelector(".header");
+let lastScroll = 0;
+
+window.addEventListener("scroll", (e) => {
+  let currentHeight = window.scrollY;
+  if (currentHeight <= 0) {
+    header.classList.remove("active-sticky");
+    return;
+  }
+
+  if (
+    currentHeight > lastScroll &&
+    !header.classList.contains("active-sticky")
+  ) {
+    header.classList.remove("active-sticky");
+    header.classList.add("active-sticky");
+  } else if (
+    currentHeight < lastScroll &&
+    header.classList.contains("active-sticky")
+  ) {
+    header.classList.remove("active-sticky");
+    header.classList.add("active-sticky");
+  }
+  lastScroll = currentScroll;
+});
