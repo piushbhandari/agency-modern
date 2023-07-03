@@ -9,6 +9,7 @@
   --color-blue: #2563ff;
   --color-orange: #ffa740;
   --color-gray: #f7f8fb;
+  --color-o-black: rgba(52, 61, 72, 0.8);
 
   /* containers */
   --container-default: 115.8rem;
@@ -1205,6 +1206,68 @@ ul.pricing-tables__checklist {
   text-decoration: underline;
 }
 /* price table */
+
+/* blog slider  */
+
+.section-blog-slider {
+  border: 1px solid pink;
+}
+.blog-listing12 {
+}
+.blog-listing12__item {
+  box-shadow: 0px 4px 80px 0px rgba(39, 83, 123, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  /* temp */
+  width: 100%;
+  max-width: 44.8rem;
+}
+.blog-listing12__imgbox {
+  position: relative;
+  width: 100%;
+  max-width: 44.8rem;
+  padding-bottom: 62.5%;
+}
+.blog-listing12__imgbox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.blog-listing12__content {
+  padding: 3rem;
+}
+.blog-listing12__link {
+  text-decoration: none;
+}
+.blog-listing12__link:hover,
+.blog-listing12__link:focus {
+  text-decoration: underline;
+}
+.blog-listing12__title {
+  margin-bottom: 3rem;
+}
+.blog-listing12__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.blog-listing12__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+.blog-listing12__date {
+  margin: 0;
+  color: var(--color-o-black);
+}
+/* blog slider  */
+
 /* etc */
 /* main/sections */
 
