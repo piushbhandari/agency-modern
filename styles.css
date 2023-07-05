@@ -1268,6 +1268,61 @@ ul.pricing-tables__checklist {
 }
 /* blog slider  */
 
+/* testimonial slider */
+.section-testimonial-slider {
+  border: 1px solid red;
+}
+.testimonial-listing {
+}
+.testimonial-listing__item {
+  padding: 3.3rem 1.4rem 4rem 4rem;
+  box-shadow: 0px 4px 80px 0px rgba(39, 83, 123, 0.12);
+  border-radius: 10px;
+  /* temp */
+
+  width: 100%;
+  max-width: 42.2rem;
+}
+.testimonial-listing__ratings {
+}
+.testimonial-listing__title {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  line-height: 3.3rem;
+}
+.testimonail-listing__txt {
+  font-size: 1.8rem;
+  line-height: 3.8rem;
+  margin-bottom: 3.6rem;
+}
+.testimonial-listing__bottom {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.testimonial-listing__prof {
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  overflow: hidden;
+}
+
+.testimonial-listing__name {
+}
+.testimonial-listing__fname {
+  margin-bottom: 0;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+}
+
+.testimonial-listing__tag {
+  margin: 0;
+  color: var(--color-primary);
+  letter-spacing: -0.375px;
+  font-weight: 500;
+}
+/* testimonial slider */
+
 /* etc */
 /* main/sections */
 
